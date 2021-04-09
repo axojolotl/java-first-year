@@ -13,11 +13,9 @@ public class activity_2_part_1 {
         System.out.print("Sub-array size: ");
         int sub_array_size = sc.nextInt();
 
-        for (int i = 0; i < sub_array_size; i++) {
+        for (int i = 0; i < sub_array_size; i++)
             sum += num[i];
-        }
 
         System.out.println("Sub-array from 0 " + (sub_array_size-1) + " and sum is " + sum );
    } 
-
 }
