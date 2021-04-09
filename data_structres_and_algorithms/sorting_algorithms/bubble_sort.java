@@ -1,4 +1,5 @@
 package sorting_algorithms;
+
 import java.util.Arrays;
 
 public class bubble_sort {
@@ -21,5 +22,6 @@ public class bubble_sort {
         int[] arr2 = {5,0,1,2,3,4,-2};
 
         bubbleSort(arr);
+        bubbleSort(arr2);
    } 
 }
