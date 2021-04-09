@@ -1,0 +1,43 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}",
+            "console": "externalTerminal"
+        },
+        {
+            "type": "java",
+            "name": "Launch activity_1",
+            "request": "launch",
+            "mainClass": "activity_1.activity_1",
+            "projectName": "neuniversity_be2dec98"
+        },
+        {
+            "type": "java",
+            "name": "Launch activity_1_wloop_arrays",
+            "request": "launch",
+            "mainClass": "activity_1.activity_1_wloop_arrays",
+            "projectName": "neuniversity_be2dec98"
+        },
+        {
+            "type": "java",
+            "name": "Launch activity_2_part_1",
+            "request": "launch",
+            "mainClass": "activity_2.activity_2_part_1",
+            "projectName": "neuniversity_be2dec98"
+        },
+        {
+            "type": "java",
+            "name": "Launch activity_2_part_2",
+            "request": "launch",
+            "mainClass": "activity_2.activity_2_part_2",
+            "projectName": "neuniversity_be2dec98"
+        }
+    ]
+}
