@@ -1,4 +1,5 @@
-package activity_2_1;
+package activity_2;
+
 
 import java.util.Scanner;
 
