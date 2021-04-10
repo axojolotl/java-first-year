@@ -1,3 +1,5 @@
+package activity_2_1;
+
 import java.util.Scanner;
 
 public class Activity_2_part_1{

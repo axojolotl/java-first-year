@@ -1,3 +1,5 @@
+package activity_2_1;
+
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -11,6 +13,8 @@ public class Activity_2_part_3 {
         }
         printer(sort(arr)); 
         System.out.print(Arrays.toString(sort(arr)));
+
+        sc.close();
     }
 
     static int[] sort(int[] arr){
