@@ -9,8 +9,6 @@ public class Activty_2_part_2 {
 
         System.out.print(Arrays.toString(sort(num1)));
         System.out.print(Arrays.toString(sort(num2)));
-
-
     }
 
     static int[] sort(int[] arr){
