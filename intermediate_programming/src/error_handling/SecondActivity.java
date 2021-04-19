@@ -1,6 +1,5 @@
 import java.util.Scanner;
 public class SecondActivity{
-
     static String[] choices = {
     "Area of a Circle", "Circumference of a Circle",
     "Area of a Triangle", "Perimeter of a Triangle",
@@ -10,40 +9,44 @@ public class SecondActivity{
     "Volume of a Sphere", "Surface of a Sphere"
     };
 
-    static void print(String msg){
-        System.out.print(msg);
+    static void println(String msg){
+        System.out.println(msg);
     }
 
     static int intInput(String msg, Scanner sc){
-        print(msg);
+        System.out.print(msg);
         int n = sc.nextInt();
         return n;
     }
 
     static double doubleInput(String msg, Scanner sc){
-        print(msg);
+        System.out.print(msg);
         double n = sc.nextDouble();
         return n;
     }
     
     static void formulas(Scanner sc){
         int userInput = intInput("[Enter choice from 1 to " + choices.length + " ]: ", sc);
-        double r, area, circumference;
+        double r, area, circumference, b, h;
         switch(userInput){
             case 1: 
                 //Area of a Circle (A = pi*r**2)
                 r = doubleInput("Enter radius: ", sc);
                 area = Math.PI*Math.pow(r,2);
-                print("The area is: " + area + "\n");
+                println("The area is: " + area);
                 break;
             case 2:
-                //Circumference of a Circle
+                //Circumference of a Circle (C = 2*pi*r)
                 r = doubleInput("Enter radius: ", sc);
                 circumference = 2*Math.PI*r;
-                print("The circumference is: " + circumference + "\n");
+                println("The circumference is: " + circumference );
                 break;
             case 3: 
-                //Area of a Triangle
+                //Area of a Triangle (A = 1/2*b*h)
+                b = doubleInput("Enter base: ", sc);
+                h = doubleInput("Enter height: ", sc);
+                area = (1/2)*b*h;
+                println("The area is: " + area);
                 break;
             case 4:
                 //Perimeter of a Triangle
@@ -66,18 +69,20 @@ public class SecondActivity{
             case 10: 
                 //Surface of a Sphere
                 break;
+            case 0:
+                break;
             default:
-                print("Invalid choice!!\n");
+                println("Invalid choice!!");
                 formulas(sc);
                 
         }
     }
 
     static void menu(String[] choices){
-        print("=========MENU=========\n");
+        println("=========MENU=========");
 
         for (int i = 1; i <= choices.length; i++)
-            print(i + "." + choices[i-1] + "\n");
+            println(i + "." + choices[i-1]);
 
     }
 
