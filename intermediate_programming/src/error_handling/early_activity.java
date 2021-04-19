@@ -12,12 +12,14 @@ public class early_activity {
             try{
                 System.out.println("String input: ");
                 String str = sc.nextLine();
+                sc.close();
                 int digits = digitCounter(str);
 
                 if (str.length() >= 8 && digits >= 3)
                     System.out.println("String is valid: " + str);
                 else
                     throw new Exception();
+                    
             } catch (Exception se){
                 System.out.println("String is invalid.");
             }
