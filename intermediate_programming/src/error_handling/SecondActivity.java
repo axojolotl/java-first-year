@@ -72,7 +72,7 @@ public class SecondActivity{
                 //Volume of a Rectangular Solid (V = w*l*h)
                 l = nInput("Enter length: ", sc);
                 w = nInput("Enter width: ", sc);
-                h = nInput("Enter height", sc);
+                h = nInput("Enter height: ", sc);
                 volume = l*w*h;
                 println("The volume is: " + volume);
                 break;
