@@ -1,12 +1,9 @@
 import java.util.Scanner;
 public class SecondActivity{
     static String[] choices = {
-    "Area of a Circle", "Circumference of a Circle",
-    "Area of a Triangle", "Perimeter of a Triangle",
-    "Area of a Rectangle", "Perimeter of a Rectangle",
-    "Volume of a Rectangular Solid", 
-    "Surface Area of a Rectangular Solid",
-    "Volume of a Sphere", "Surface of a Sphere"
+    "Area of a Circle", "Circumference of a Circle","Area of a Triangle", "Perimeter of a Triangle",
+    "Area of a Rectangle", "Perimeter of a Rectangle","Volume of a Rectangular Solid", 
+    "Surface Area of a Rectangular Solid", "Volume of a Sphere", "Surface of a Sphere"
     };
 
     static void println(String msg){
@@ -26,9 +23,9 @@ public class SecondActivity{
     }
     
     static void formulas(Scanner sc){
-        int userInput = intInput("[Enter choice from 1 to " + choices.length + " ]: ", sc);
-        double r, area, circumference, b, h;
-        switch(userInput){
+        double userInput = doubleInput("[Enter choice from 1 to " + choices.length + " ]: ", sc);
+        double r, area, circumference, b, h, a, c, perimeter;
+        switch((int)userInput){
             case 1: 
                 //Area of a Circle (A = pi*r**2)
                 r = doubleInput("Enter radius: ", sc);
@@ -45,11 +42,16 @@ public class SecondActivity{
                 //Area of a Triangle (A = 1/2*b*h)
                 b = doubleInput("Enter base: ", sc);
                 h = doubleInput("Enter height: ", sc);
-                area = (1/2)*b*h;
+                area = 0.5*b*h;
                 println("The area is: " + area);
                 break;
             case 4:
                 //Perimeter of a Triangle
+                a = doubleInput("Enter first side: ", sc);
+                c = doubleInput("Enter second side: ", sc);
+                b = doubleInput("Enter base: ", sc);
+                perimeter = a+b+c;
+                println("The perimeter is: " + perimeter);
                 break;
             case 5:     
                 //Area of a Rectangle
