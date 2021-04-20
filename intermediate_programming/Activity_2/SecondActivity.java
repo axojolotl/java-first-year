@@ -119,7 +119,7 @@ public class SecondActivity{
                 break;
             case 10: //Surface Area of a Sphere (A = 4*pi*r**2)
                 r = nInput("Enter radius: ");
-                println("The surface of your sphere is: " + surfaceSphere(r));
+                println("The surface area of your sphere is: " + surfaceSphere(r));
                 break;
             default:
                 println("Invalid choice!!");
