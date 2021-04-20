@@ -38,130 +38,130 @@ public class SecondActivity1 {
         print("10.");
     }
 
-    static void formula1(double a, double b, double c){
+    //static double formula1(double a,double b, double c){
+        //// answer = a+b+c;
+        ////return answer;
+    //}
 
-        // answer = a+b+c;
-        // print("Answer is: " + answer) ;
-    }
+    //static double formula2(double a,double b, double c){
+        //// answer = a+b+c;
+        ////return answer;
+    //}
 
-    static void formula2(double a, double b, double c){
+    //static double formula3(double a,double b, double c){
+        //// answer = a+b+c;
+        ////return answer;
+    //}
 
-        // answer = a+b+c;
-        // print("Answer is: " + answer) ;
-    }
-
-    static void formula3(double a, double b, double c){
+    //static double formula4(double a,double b, double c){
+        //// answer = a+b+c;
+        ////return answer;
+    //}
     
-        // answer = a+b+c;
-        // print("Answer is: " + answer) ;
-    }
+    //static double formula5(double a,double b, double c){
+        //// answer = a+b+c;
+        ////return answer;
+    //}
 
-    static void formula4(double a, double b, double c){
 
-        // answer = a+b+c;
-        // print("Answer is: " + answer) ;
-    }
+    //static double formula6(double a,double b, double c){
+        //// answer = a+b+c;
+        ////return answer;
+    //}
+
+    //static double formula7(double a,double b, double c){
+        //// answer = a+b+c;
+        ////return answer;
+    //}
     
-    static void formula5(double a, double b, double c){
+    //static double formula8(double a,double b, double c){
+        //// answer = a+b+c;
+        ////return answer;
+    //}
 
-        // answer = a+b+c;
-        // print("Answer is: " + answer) ;
-    }
+    //static double formula9(double a,double b, double c){
+        //// answer = a+b+c;
+        ////return answer;
+    //}
 
-
-    static void formula6(double a, double b, double c){
-
-        // answer = a+b+c;
-        // print("Answer is: " + answer) ;
-    }
-
-    static void formula7(double a, double b, double c){
-
-        // answer = a+b+c;
-        // print("Answer is: " + answer) ;
-    }
-    
-    static void formula8(double a, double b, double c){
-
-        // answer = a+b+c;
-        // print("Answer is: " + answer) ;
-    }
-
-    static void formula9(double a, double b, double c){
-
-        // answer = a+b+c;
-        // print("Answer is: " + answer) ;
-    }
-
-    static void formula10(double a, double b, double c){
-
-        // answer = a+b+c;
-        // print("Answer is: " + answer) ;
-    }
+    //static double formula10(double a,double b, double c){
+        //// answer = a+b+c;
+        ////return answer;
+    //}
 
     static void switchCase(){
         int userChoice = switchInput("Choose from 1 to 10: ");
-        double a,b,c;
+        double a,b,c,answer;
         switch(userChoice){
             case 1:
-                a = input("#");
-                b = input("#");
-                c = input("#");
-                formula1(a,b,c); 
+                //a = input("Enter a: ");
+                //b = input("Enter b: ");
+                //c = input("Enter c: ");
+                //answer = formula1(a,b,c); 
+                //print("answer is: " + answer);
                 break;
             case 2:
-                a = input("#");
-                b = input("#");
-                c = input("#");
-                formula2(a,b,c); 
+                //a = input("Enter a: ");
+                //b = input("Enter b: ");
+                //c = input("Enter c: ");
+                //answer = formula2(a,b,c); 
+                //print("answer is: " + answer);
                 break;
             case 3:
-                a = input("#");
-                b = input("#");
-                c = input("#");
-                formula3(a,b,c);
+                //a = input("Enter a: ");
+                //b = input("Enter b: ");
+                //c = input("Enter c: ");
+                //answer = formula2(a,b,c); 
+                //print("answer is: " + answer);
                 break;
             case 4:
-                a = input("#");
-                b = input("#");
-                c = input("#");
-                formula4(a,b,c);
+                //a = input("Enter a: ");
+                //b = input("Enter b: ");
+                //c = input("Enter c: ");
+                //answer = formula2(a,b,c); 
+                //print("answer is: " + answer);
                 break;
             case 5:
-                a = input("#");
-                b = input("#");
-                c = input("#");
-                formula5(a,b,c);
+                //a = input("Enter a: ");
+                //b = input("Enter b: ");
+                //c = input("Enter c: ");
+                //answer = formula2(a,b,c); 
+                //print("answer is: " + answer);
                 break;
             case 6:
-                a = input("#");
-                b = input("#");
-                c = input("#");
-                formula6(a,b,c);
+                //a = input("Enter a: ");
+                //b = input("Enter b: ");
+                //c = input("Enter c: ");
+                //answer = formula2(a,b,c);
+                //print("answer is: " + answer);
                 break;
             case 7:
-                a = input("#");
-                b = input("#");
-                c = input("#");
-                formula7(a,b,c);
+                //a = input("Enter a: ");
+                //b = input("Enter b: ");
+                //c = input("Enter c: ");
+                //answer = formula2(a,b,c);    
+                //print("answer is: " + answer);
                 break;
             case 8:
-                a = input("#");
-                b = input("#");
-                c = input("#");
-                formula8(a,b,c);
+                //a = input("Enter a: ");
+                //b = input("Enter b: ");
+                //c = input("Enter c: ");
+                //answer = formula2(a,b,c); 
+                //print("answer is: " + answer);
                 break;
             case 9:
-                a = input("#");
-                b = input("#");
-                c = input("#");
-                formula9(a,b,c);
+                //a = input("Enter a: ");
+                //b = input("Enter b: ");
+                //c = input("Enter c: ");
+                //answer = formula2(a,b,c); 
+                //print("answer is: " + answer);
                 break;
             case 10:
-                a = input("#");
-                b = input("#");
-                c = input("#");
-                formula10(a,b,c);
+               // a = input("Enter a: ");
+               // b = input("Enter b: ");
+               // c = input("Enter c: ");
+                //answer = formula2(a,b,c); 
+                //print("answer is: " + answer);
                 break;
             default:
                 print("Invalid entry");
