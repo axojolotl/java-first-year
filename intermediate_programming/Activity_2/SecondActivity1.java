@@ -142,7 +142,7 @@ public class SecondActivity1 {
                 formula6();
                 break;
             case 7:
-                formula7()
+                formula7();
                 break;
             case 8:
                 formula8();

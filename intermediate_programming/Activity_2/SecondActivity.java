@@ -26,107 +26,100 @@ public class SecondActivity{
             println(i + "." + choices[i-1]);
     }
 
-    static void areaCircle(){ 
-        double r = nInput("Enter radius: "),
-        area = Math.PI*Math.pow(r,2);
-        println("The area is: " + area);
+    static double areaCircle(double r){ 
+        return Math.PI*Math.pow(r,2);
     }
 
-    static void circumferenceCircle(){
-        double r = nInput("Enter radius: "),
-        circumference = 2*Math.PI*r;
-        println("The circumference is: " + circumference );
+    static double circumferenceCircle(double r){
+        return 2*Math.PI*r;
+    
     }
 
-    static void areaTriangle(){
-        double b = nInput("Enter base: "),
-        h = nInput("Enter height: "),
-        area = 0.5*b*h;
-        println("The area is: " + area);
+    static double areaTriangle(double b, double h){
+        return 0.5*b*h;
     }
 
-    static void perimeterTriangle(){
-        double a = nInput("Enter first side: "),
-        c = nInput("Enter second side: "),
-        b = nInput("Enter base: "),
-        perimeter = a+b+c;
-        println("The perimeter is: " + perimeter);
+    static double perimeterTriangle(double a, double b, double c){
+        return a+b+c;
     }
 
-    static void areaRectangle(){
-        double w = nInput("Enter width: "),
-        l = nInput("Enter length: "),
-        area = w*l;
-        println("The area is: " + area);
+    static double areaRectangle(double w, double l){
+        return w*l;
     }
 
-    static void perimeterRectangle(){
-        double l = nInput("Enter length: "),
-        w = nInput("Enter width: "),
-        perimeter = 2*(l+w);
-        println("The perimeter is: " + perimeter);
-    }
+    static double perimeterRectangle(double l,double w){
+        return 2*(l+w);
+    } 
 
-    static void volumeRectangle(){
-        double l = nInput("Enter length: "),
-        w = nInput("Enter width: "),
-        h = nInput("Enter height: "),
-        volume = l*w*h;
-        println("The volume is: " + volume);
+    static double volumeRectangle(double l, double w, double h){
+        return l*w*h;
     }
     
-    static void surfaceRectangle(){
-        double l = nInput("Enter length: "),
-        w = nInput("Enter width: "),
-        h = nInput("Enter height: "),
-        area = 2*(w*l + h*l + h*w);
-        println("The surface area is: " + area);
+    static double surfaceRectangle(double w, double l, double h){
+        return 2*(w*l + h*l + h*w);
     }
 
-    static void volumeSphere(){
-        double r = nInput("Enter radius: "),
-        volume = 1.33333333333 * Math.PI * Math.pow(r,3);
-        println("The volume is: " + volume);
+    static double volumeSphere(double r){
+        return 1.33333333333 * Math.PI * Math.pow(r,3);
     }
 
-    static void surfaceSphere(){
-        double r = nInput("Enter radius: "),
-        area = 4 * Math.PI * Math.pow(r,2);
-        println("The surface area is: " + area);
+    static double surfaceSphere(double r){
+        return 4 * Math.PI * Math.pow(r,2);
     }
 
     static void formulas(){
-        double userInput = nInput("[Enter choice from 1 to " + choices.length + " ]: ");
+        double userInput = nInput("[Enter choice from 1 to " + choices.length + " ]: "),
+        a,b,c,r,w,l,h;
+
         switch((int)userInput){
             case 1: //Area of a Circle (A = pi*r**2)
-                areaCircle();
+                r = nInput("Enter radius: ");
+                println("The area of your circle is: " + areaCircle(r));
                 break;
             case 2: //Circumference of a Circle (C = 2*pi*r)
-                circumferenceCircle();
+                r = nInput("Enter radius: ");
+                println("The circumference of your circle is: " + circumferenceCircle(r));
                 break;
             case 3: //Area of a Triangle (A = 1/2*b*h or (b*h/2))
-                areaTriangle();
+                b = nInput("Enter base: ");
+                h = nInput("Enter height: ");
+                println("The area of your triangle is: " + areaTriangle(b,h));
                 break;
             case 4: //Perimeter of a Triangle (P = a+b+c)
-                perimeterTriangle();
+                a = nInput("Enter first side: ");
+                c = nInput("Enter second side: ");
+                b = nInput("Enter base: ");
+                println("The perimeter of your triangle is: " + perimeterTriangle(a,b,c));
                 break;
             case 5: //Area of a Rectangle (A = l*w)
-                areaTriangle();
+                w = nInput("Enter width: ");
+                l = nInput("Enter length: ");
+                println("The area of your rectangle is: " + areaRectangle(w,l));
                 break;
             case 6: //Perimeter of a Rectangle (P = 2(l+w))
-                perimeterRectangle();
+                l = nInput("Enter length: "); 
+                w = nInput("Enter width: ");
+                println("The perimeter of your rectangle is: " + perimeterRectangle(l,w));
                 break;
             case 7: //Volume of a Rectangular Solid (V = w*l*h)
-                volumeRectangle();
+                l = nInput("Enter length: ");
+                w = nInput("Enter width: ");
+                h = nInput("Enter height: ");
+                println("The volume of your rectangle is: " + volumeRectangle(l,w,h));
                 break;
             case 8: //Surface Area of a Rectangular Solid (A = 2*(w*l + h*l + h*w));
-                surfaceRectangle();
+                l = nInput("Enter length: ");
+                w = nInput("Enter width: ");
+                h = nInput("Enter height: ");
+                println("The surface area of your rectangle is: " + surfaceRectangle(w,l,h));
                 break;
             case 9: //Volume of a Sphere (V = (4/3)*pi*r**3)
-                volumeSphere();
+                r = nInput("Enter radius: ");
+                println("The volume of your sphere is: " + volumeSphere(r));
                 break;
             case 10: //Surface Area of a Sphere (A = 4*pi*r**2)
-                surfaceSphere();
+                r = nInput("Enter radius: ");
+                println("The surface of your sphere is: " + surfaceSphere(r));
                 break;
             default:
                 println("Invalid choice!!");
