@@ -38,81 +38,120 @@ public class SecondActivity1 {
         print("10.");
     }
 
+    static void formula1(){
+        // double a = input("#");
+        // double b = input("#")
+        // double c = input("#");
+        // answer = a+b+c;
+        // print("Answer is: " + answer) ;
+    }
+
+    static void formula2(){
+        // double a = input("#");
+        // double b = input("#")
+        // double c = input("#");
+        // answer = a+b+c;
+        // print("Answer is: " + answer) ;
+    }
+
+    static void formula3(){
+        // double a = input("#");
+        // double b = input("#")
+        // double c = input("#");
+        // answer = a+b+c;
+        // print("Answer is: " + answer) ;
+    }
+
+    static void formula4(){
+        // double a = input("#");
+        // double b = input("#")
+        // double c = input("#");
+        // answer = a+b+c;
+        // print("Answer is: " + answer) ;
+    }
+    
+    static void formula5(){
+        // double a = input("#");
+        // double b = input("#")
+        // double c = input("#");
+        // answer = a+b+c;
+        // print("Answer is: " + answer) ;
+    }
+
+
+    static void formula6(){
+        // double a = input("#");
+        // double b = input("#")
+        // double c = input("#");
+        // answer = a+b+c;
+        // print("Answer is: " + answer) ;
+    }
+
+    static void formula7(){
+        // double a = input("#");
+        // double b = input("#")
+        // double c = input("#");
+        // answer = a+b+c;
+        // print("Answer is: " + answer) ;
+    }
+    
+    static void formula8(){
+        // double a = input("#");
+        // double b = input("#")
+        // double c = input("#");
+        // answer = a+b+c;
+        // print("Answer is: " + answer) ;
+    }
+
+    static void formula9(){
+        // double a = input("#");
+        // double b = input("#")
+        // double c = input("#");
+        // answer = a+b+c;
+        // print("Answer is: " + answer) ;
+    }
+
+    static void formula10(){
+        // double a = input("#");
+        // double b = input("#")
+        // double c = input("#");
+        // answer = a+b+c;
+        // print("Answer is: " + answer) ;
+    }
+
     static void switchCase(){
         int userChoice = switchInput("Choose from 1 to 10: ");
 
-        //initialize variables here (e.g; double a,b,c,mass,force,acceleration)
-
         switch(userChoice){
             case 1:
-                // double a = input("#");
-                // double b = input("#");
-                // double c = input("#");
-                // answer = a+b+c;
-                // print("Answer is: " + answer) ;
+                formula1(); 
                 break;
             case 2:
-                // double a = input("#");
-                // double b = input("#");
-                // double c = input("#");
-                // answer = a+b+c;
-                // print("Answer is: " + answer) ;
+                formula2(); 
                 break;
             case 3:
-                // double a = input("#");
-                // double b = input("#");
-                // double c = input("#");
-                // answer = a+b+c;
-                // print("Answer is: " + answer) ;
+                formula3();
                 break;
             case 4:
-                // double a = input("#");
-                // double b = input("#");
-                // double c = input("#");
-                // answer = a+b+c;
-                // print("Answer is: " + answer) ;
+                formula4();
                 break;
             case 5:
-                // double a = input("#");
-                // double b = input("#");
-                // double c = input("#");
-                // answer = a+b+c;
-                // print("Answer is: " + answer) ;
+                formula5();
                 break;
             case 6:
-                // double a = input("#");
-                // double b = input("#");
-                // double c = input("#");
-                // answer = a+b+c;
-                // print("Answer is: " + answer) ;
+                formula6();
                 break;
             case 7:
-                // double a = input("#");
-                // double b = input("#");
-                // double c = input("#");
-                // answer = a+b+c;
-                // print("Answer is: " + answer) ;
+                formula7()
                 break;
             case 8:
-                // double a = input("#");
-                // double b = input("#");
-                // double c = input("#");
-                // answer = a+b+c;
-                // print("Answer is: " + answer) ;
+                formula8();
                 break;
             case 9:
-                // double a = input("#");
-                // double b = input("#");
-                // double c = input("#");
-                // answer = a+b+c;
-                // print("Answer is: " + answer) ;
+                formula9();
                 break;
             case 10:
-                // double a = input("#");
-                // double b = input("#");
-                // double c = input("#");
-                // answer = a+b+c;
-                // print("Answer is: " + answer) ;
+                formula10();
                 break;
             default:
                 print("Invalid entry");
