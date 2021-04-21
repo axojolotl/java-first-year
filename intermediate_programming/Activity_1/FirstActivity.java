@@ -20,6 +20,8 @@ public class FirstActivity {
         printer("Enter first number: "); a = sc.nextInt();
         printer("Enter second number: "); b = sc.nextInt();
         printer("Enter operator(+,-,*,/,%) "); op = sc2.nextLine();
+        sc.close();
+        sc2.close();
    }
 
    static void computation(){

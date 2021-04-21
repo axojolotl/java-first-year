@@ -16,6 +16,7 @@ public class early_activity_without_exception {
                 System.out.println("String is valid: " + str);
             else
                 System.out.println("String is invalid.");
+        sc.close();
     }
 
     static int digitCounter(String str){
