@@ -3,6 +3,12 @@ import java.util.Arrays;
 
 public class simulation1 {
 
+	public static void run() {
+		int[] nums = {2,3,1,7,9,5,11,3,5};
+		
+		System.out.println(Arrays.toString(nums));
+		System.out.println(diff_between_two_elements(nums));
+    }
     public static int diff_between_two_elements(int[] nums){
         int diff_two_elemnts = Integer.MIN_VALUE;
         
@@ -12,11 +18,5 @@ public class simulation1 {
             }
         }
         return diff_two_elemnts;
-    }
-	public static void run() {
-		int[] nums = {2,3,1,7,9,5,11,3,5};
-		
-		System.out.println(Arrays.toString(nums));
-		System.out.println(diff_between_two_elements(nums));
 	}
 }
