@@ -1,11 +1,13 @@
+package activity_2;
+
 import java.util.Scanner;
 
-public class SecondActivity{
+public class Act2 {
 
     static String[] choices = {
-    "Area of a Circle", "Circumference of a Circle","Area of a Triangle", "Perimeter of a Triangle",
-    "Area of a Rectangle", "Perimeter of a Rectangle","Volume of a Rectangular Solid", 
-    "Surface Area of a Rectangular Solid", "Volume of a Sphere", "Surface Area of a Sphere"
+            "Area of a Circle", "Circumference of a Circle","Area of a Triangle", "Perimeter of a Triangle",
+            "Area of a Rectangle", "Perimeter of a Rectangle","Volume of a Rectangular Solid",
+            "Surface Area of a Rectangular Solid", "Volume of a Sphere", "Surface Area of a Sphere"
     };
 
     static void println(String msg){
@@ -26,13 +28,13 @@ public class SecondActivity{
             println(i + "." + choices[i-1]);
     }
 
-    static double areaCircle(double r){ 
+    static double areaCircle(double r){
         return Math.PI*Math.pow(r,2);
     }
 
     static double circumferenceCircle(double r){
         return 2*Math.PI*r;
-    
+
     }
 
     static double areaTriangle(double b, double h){
@@ -49,12 +51,12 @@ public class SecondActivity{
 
     static double perimeterRectangle(double l,double w){
         return 2*(l+w);
-    } 
+    }
 
     static double volumeRectangle(double l, double w, double h){
         return l*w*h;
     }
-    
+
     static double surfaceRectangle(double w, double l, double h){
         return 2*(w*l + h*l + h*w);
     }
@@ -69,7 +71,7 @@ public class SecondActivity{
 
     static void formulas(){
         double userInput = nInput("[Enter choice from 1 to " + choices.length + " ]: "),
-        a,b,c,r,w,l,h;
+                a,b,c,r,w,l,h;
 
         switch((int)userInput){
             case 1: //Area of a Circle (A = pi*r**2)
@@ -97,7 +99,7 @@ public class SecondActivity{
                 println("The area of your rectangle is: " + areaRectangle(w,l));
                 break;
             case 6: //Perimeter of a Rectangle (P = 2(l+w))
-                l = nInput("Enter length: "); 
+                l = nInput("Enter length: ");
                 w = nInput("Enter width: ");
                 println("The perimeter of your rectangle is: " + perimeterRectangle(l,w));
                 break;
@@ -126,7 +128,7 @@ public class SecondActivity{
                 formulas();
         }
     }
-    public static void main(String[] args) {
+    public static void run() {
         menu(choices);
         formulas();
     }
