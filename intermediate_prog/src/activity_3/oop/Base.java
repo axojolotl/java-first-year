@@ -1,6 +1,6 @@
 package activity_3.oop;
 
-public class Base {
+public class Base{
     public static void run(){
         Food.printMenu(Food.food);
         byte categoryChoice = Food.categoryInput();
@@ -11,23 +11,23 @@ public class Base {
         byte variantChoice;
         switch(choice){
             case 1:
-                Food.printMenu(Burger.burgers);
+                Food.printSubMenu(Burger.burgers, Burger.burgerPrices);
                 variantChoice = Food.categoryInput();
                 subSwitch(variantChoice, Burger.burgerPrices);
                 break;
             case 2:
-                Food.printMenu(Pizza.pizzas);
+                Food.printSubMenu(Pizza.pizzas, Pizza.pizzaPrices);
                 variantChoice = Food.categoryInput();
                 subSwitch(variantChoice, Pizza.pizzaPrices);
                 break;
             case 3:
-                Food.printMenu(Sandwich.sandwiches);
+                Food.printSubMenu(Sandwich.sandwiches, Sandwich.sandwichPrices);
                 variantChoice = Food.categoryInput();
                 subSwitch(variantChoice, Sandwich.sandwichPrices);
                 break;
             default:
                 System.out.println("Invalid entry");
-                mainSwitch(choice);
+                break;
         }
     }
 
@@ -37,18 +37,21 @@ public class Base {
             case 1:
                 int aQty = Food.quantityInput();
                 totalPrice += aQty * prices[0];
+                Food.printAndPayBill(totalPrice);
                 break;
             case 2:
                 int bQty = Food.quantityInput();
                 totalPrice += bQty * prices[1];
+                Food.printAndPayBill(totalPrice);
                 break;
             case 3:
                 int cQty = Food.quantityInput();
                 totalPrice += cQty * prices[2];
+                Food.printAndPayBill(totalPrice);
                 break;
             default:
                 System.out.println("Invalid entry");
-                subSwitch(choice, prices);
+                break;
         }
     }
 }
