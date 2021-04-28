@@ -1,7 +1,6 @@
 //JUST IMPORT THE NEEDED ACTIVITY AND THEN RUN
-import activity_3.Act3v1;
+import activity_3.oop.*;
 public class App {
-    public static void main(String[] args) throws Exception {
-        Act3v1.run();
+    public static void main(String[] args) {
     }
 }
