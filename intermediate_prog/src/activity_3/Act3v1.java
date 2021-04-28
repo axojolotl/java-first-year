@@ -15,6 +15,63 @@ public class Act3v1 {
         categorySwitch(categoryChoice);
     }
 
+    public static void printMainMenu(){
+        System.out.println("==============MENU==============");
+        for (int i = 0; i < food.length ; i++)
+            System.out.println(i+1 + ". " + food[i][0][0]);
+    }
+
+    public static void printSubMenu(String[] arr){
+        System.out.println("================================");
+        for (int i = 0; i < arr.length ; i++)
+            System.out.println(i+1 + ". " + arr[i]);
+    }
+
+    public static byte userInput(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter #: ");
+        return sc.nextByte();
+    }
+
+    public static byte inputQty(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter quantity: ");
+        return sc.nextByte();
+    }
+
+    public static void payBill(double price){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter amount to pay: ");
+        double amount = sc.nextInt();
+        if (amount >= price){
+            System.out.println("============RECEIPT=============");
+            System.out.println("Change: " + (amount-price));
+            System.out.println("Enjoy your meal.");
+        } else {
+            System.out.println("Insufficient amount.");
+            payBill(price);
+        }
+    }
+
+    public static void variantSwitch(int choice){
+        System.out.println("================================");
+        System.out.println("Your order:");
+        switch(choice){
+            case 1:
+                System.out.println("-" + food[categoryChoice-1][1][0]);
+                price = 0; break;
+            case 2:
+                System.out.println("-" + food[categoryChoice-1][1][1]);
+                price = 1; break;
+            case 3:
+                System.out.println("-" + food[categoryChoice-1][1][2]);
+                price = 2; break;
+            default:
+                System.out.println("Invalid choice");
+                variantSwitch(choice);
+        }
+    }
+
     public static void categorySwitch(int choice){
         byte qty;
         double itemPrice;
@@ -52,60 +109,6 @@ public class Act3v1 {
             default:
                 System.out.println("Invalid choice.");
                 categorySwitch(choice);
-        }
-    }
-
-    public static void variantSwitch(int choice){
-        System.out.println("Your order:");
-        switch(choice){
-            case 1:
-                System.out.println("-" + food[categoryChoice-1][1][0]);
-                price = 0; break;
-            case 2:
-                System.out.println("-" + food[categoryChoice-1][1][1]);
-                price = 1; break;
-            case 3:
-                System.out.println("-" + food[categoryChoice-1][1][2]);
-                price = 2; break;
-            default:
-                System.out.println("Invalid choice");
-                variantSwitch(choice);
-        }
-    }
-
-    public static void printMainMenu(){
-        System.out.println("==============MENU==============");
-        for (int i = 0; i < food.length ; i++)
-            System.out.println(i+1 + ". " + food[i][0][0]);
-    }
-
-    public static void printSubMenu(String[] arr){
-        for (int i = 0; i < arr.length ; i++)
-            System.out.println(i+1 + ". " + arr[i]);
-    }
-
-    public static byte userInput(){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter #: ");
-        return sc.nextByte();
-    }
-
-    public static byte inputQty(){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter quantity: ");
-        return sc.nextByte();
-    }
-
-    public static void payBill(double price){
-        Scanner sc = new Scanner(System.in);
-        System.out.print("Enter amount to pay: ");
-        double amount = sc.nextInt();
-        if (amount >= price){
-            System.out.println("Change: " + (amount-price));
-            System.out.println("Enjoy your meal.");
-        } else {
-            System.out.println("Insufficient amount.");
-            payBill(price);
         }
     }
 }
