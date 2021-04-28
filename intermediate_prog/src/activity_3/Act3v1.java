@@ -56,27 +56,31 @@ public class Act3v1 {
     public static void variantSwitch(int choice){
         System.out.println("================================");
         System.out.println("Your order:");
-        switch(choice){
-            case 1:
-                System.out.println("-" + food[categoryChoice-1][1][0]);
-                price = 0; break;
-            case 2:
-                System.out.println("-" + food[categoryChoice-1][1][1]);
-                price = 1; break;
-            case 3:
-                System.out.println("-" + food[categoryChoice-1][1][2]);
-                price = 2; break;
-            default:
+        switch (choice) {
+            case 1 -> {
+                System.out.println("-" + food[categoryChoice - 1][1][0]);
+                price = 0;
+            }
+            case 2 -> {
+                System.out.println("-" + food[categoryChoice - 1][1][1]);
+                price = 1;
+            }
+            case 3 -> {
+                System.out.println("-" + food[categoryChoice - 1][1][2]);
+                price = 2;
+            }
+            default -> {
                 System.out.println("Invalid choice");
                 variantSwitch(choice);
+            }
         }
     }
 
     public static void categorySwitch(int choice){
         byte qty;
         double itemPrice;
-        switch(choice){
-            case 1:
+        switch (choice) {
+            case 1 -> {
                 //pizza
                 printSubMenu(food[0][1]);
                 variantChoice = userInput();
@@ -85,30 +89,31 @@ public class Act3v1 {
                 itemPrice = qty * prices[price];
                 System.out.println("BILL: PHP" + itemPrice);
                 payBill(itemPrice);
-                break;
-            case 2:
+            }
+            case 2 -> {
                 //burger
                 printSubMenu(food[1][1]);
                 variantChoice = userInput();
                 variantSwitch(variantChoice);
                 qty = inputQty();
-                itemPrice = qty * prices[price+3];
+                itemPrice = qty * prices[price + 3];
                 System.out.println("BILL: PHP" + itemPrice);
                 payBill(itemPrice);
-                break;
-            case 3:
+            }
+            case 3 -> {
                 //sandwich
                 printSubMenu(food[2][1]);
                 variantChoice = userInput();
                 variantSwitch(variantChoice);
                 qty = inputQty();
-                itemPrice = qty * prices[price+6];
+                itemPrice = qty * prices[price + 6];
                 System.out.println("BILL: PHP" + itemPrice);
                 payBill(itemPrice);
-                break;
-            default:
+            }
+            default -> {
                 System.out.println("Invalid choice.");
                 categorySwitch(choice);
+            }
         }
     }
 }
