@@ -1,29 +1,27 @@
 package activity_0.main_package;
 
+import activity_0.student_package.*;
 import activity_0.employee_package.EmployeeInfo;
-import activity_0.student_package.AcadInfo;
-import activity_0.student_package.StudentInfo;
 import java.util.Scanner;
 
 public class MainProgram {
     public static void main(String[] args) {
-        Scanner scDouble = new Scanner(System.in);
-        Scanner scInt = new Scanner(System.in);
-        Scanner scString = new Scanner(System.in);
+        Scanner sD = new Scanner(System.in);
+        Scanner sS = new Scanner(System.in);
 
-        StudentInfo s = new StudentInfo(scString.nextLine(),
-                scInt.nextByte(), scString.nextLine(),
-                scString.nextLine(), scInt.nextInt(),
-                scString.nextLine(),scString.nextLine());
-        AcadInfo a = new AcadInfo(scDouble.nextDouble(), scDouble.nextDouble(), scDouble.nextDouble(), scDouble.nextDouble());
-        EmployeeInfo e = new EmployeeInfo(scString.nextLine(), scString.nextLine(), scString.nextLine());
+        StudentInfo s = new StudentInfo(sS.nextLine(), sS.nextLine(), sS.nextLine(), 
+                                        sS.nextLine(), sS.nextLine(), sS.nextLine(),sS.nextLine());
+        
+        AcadInfo a = new AcadInfo(sD.nextDouble(), sD.nextDouble(), sD.nextDouble(), sD.nextDouble());
+        
+        EmployeeInfo e = new EmployeeInfo(sS.nextLine(), sS.nextLine(), sS.nextLine());
 
-        StudentInfo s1 = new StudentInfo(scString.nextLine(),
-                scInt.nextByte(), scString.nextLine(),
-                scString.nextLine(), scInt.nextInt(),
-                scString.nextLine(),scString.nextLine());
-        AcadInfo a1 = new AcadInfo(scDouble.nextDouble(), scDouble.nextDouble(), scDouble.nextDouble(), scDouble.nextDouble());
-        EmployeeInfo e1 = new EmployeeInfo(scString.nextLine(), scString.nextLine(), scString.nextLine());
+        StudentInfo s1 = new StudentInfo(sS.nextLine(), sS.nextLine(), sS.nextLine(), 
+                                         sS.nextLine(), sS.nextLine(), sS.nextLine(),sS.nextLine());
+        
+        AcadInfo a1 = new AcadInfo(sD.nextDouble(), sD.nextDouble(), sD.nextDouble(), sD.nextDouble());
+        
+        EmployeeInfo e1 = new EmployeeInfo(sS.nextLine(), sS.nextLine(), sS.nextLine());
 
         s.displayStudent();
         e.displayEmployee();
@@ -34,6 +32,5 @@ public class MainProgram {
         s1.displayStudent();
         e1.displayEmployee();
         a1.displayEducDetails();
-
     }
 }
