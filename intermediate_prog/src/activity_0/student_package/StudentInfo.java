@@ -1,13 +1,10 @@
 package activity_0.student_package;
 
 public class StudentInfo {
-    String name, gender, address, motherName, fatherName;
-    int contactNumber, age;
+    String name, gender, address, motherName, fatherName, age, contactNumber;
 
-    public StudentInfo(String name, int age,
-                            String gender, String address,
-                            int contactNumber, String motherName,
-                            String fatherName){
+    public StudentInfo(String name, String age, String gender, String address,
+                       String contactNumber, String motherName, String fatherName){
        this.name = name;
        this.age = age;
        this.gender = gender;

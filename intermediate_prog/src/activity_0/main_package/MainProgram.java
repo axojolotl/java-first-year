@@ -9,15 +9,13 @@ public class MainProgram {
         Scanner sD = new Scanner(System.in);
         Scanner sS = new Scanner(System.in);
 
-        StudentInfo s = new StudentInfo(sS.nextLine(), sS.nextLine(), sS.nextLine(), 
-                                        sS.nextLine(), sS.nextLine(), sS.nextLine(),sS.nextLine());
+        StudentInfo s = new StudentInfo(sS.nextLine(), sS.nextLine(), sS.nextLine(), sS.nextLine(), sS.nextLine(), sS.nextLine(),sS.nextLine());
         
         AcadInfo a = new AcadInfo(sD.nextDouble(), sD.nextDouble(), sD.nextDouble(), sD.nextDouble());
         
         EmployeeInfo e = new EmployeeInfo(sS.nextLine(), sS.nextLine(), sS.nextLine());
 
-        StudentInfo s1 = new StudentInfo(sS.nextLine(), sS.nextLine(), sS.nextLine(), 
-                                         sS.nextLine(), sS.nextLine(), sS.nextLine(),sS.nextLine());
+        StudentInfo s1 = new StudentInfo(sS.nextLine(), sS.nextLine(), sS.nextLine(), sS.nextLine(), sS.nextLine(), sS.nextLine(),sS.nextLine());
         
         AcadInfo a1 = new AcadInfo(sD.nextDouble(), sD.nextDouble(), sD.nextDouble(), sD.nextDouble());
         
