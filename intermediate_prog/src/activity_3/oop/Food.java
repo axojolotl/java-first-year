@@ -2,7 +2,6 @@ package activity_3.oop;
 import java.util.Scanner;
 
 public abstract class Food {
-
     public static String[] food ={"Burger", "Pizza", "Sandwich"};
 
     protected static void payBill(double price, int qty, String variant,String category){
