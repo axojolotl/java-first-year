@@ -1,4 +1,4 @@
-package activity_0.employee_package;
+package activity_0.packaging.student_package.employee_package;
 
 public class EmployeeInfo {
     private final String name, faculty, position;

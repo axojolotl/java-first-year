@@ -1,11 +1,11 @@
-package activity_0.main_package;
+package activity_0.packaging.student_package.main_package;
 
-import activity_0.student_package.*;
-import activity_0.employee_package.EmployeeInfo;
+import activity_0.packaging.student_package.*;
+import activity_0.packaging.student_package.employee_package.EmployeeInfo;
 import java.util.Scanner;
 
 public class MainProgram {
-    public static void main(String[] args) {
+    public static void run() {
         Scanner sD = new Scanner(System.in);
         Scanner sS = new Scanner(System.in);
 

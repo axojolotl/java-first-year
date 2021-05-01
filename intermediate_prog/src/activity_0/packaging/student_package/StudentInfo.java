@@ -1,4 +1,4 @@
-package activity_0.student_package;
+package activity_0.packaging.student_package;
 
 public class StudentInfo {
     String name, gender, address, motherName, fatherName, age, contactNumber;

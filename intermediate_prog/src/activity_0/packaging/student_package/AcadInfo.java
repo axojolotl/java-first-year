@@ -1,4 +1,4 @@
-package activity_0.student_package;
+package activity_0.packaging.student_package;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class AcadInfo {
