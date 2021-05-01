@@ -1,7 +1,7 @@
 package activity_0.employee_package;
 
 public class EmployeeInfo {
-    private String name, faculty, position;
+    private final String name, faculty, position;
     public EmployeeInfo(String name, String faculty, String position){
          this.name = name;
          this.faculty = faculty;

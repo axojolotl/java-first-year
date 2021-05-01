@@ -35,6 +35,5 @@ public class MainProgram {
         e1.displayEmployee();
         a1.displayEducDetails();
 
-
     }
 }
