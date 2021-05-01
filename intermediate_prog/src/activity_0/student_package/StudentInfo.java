@@ -1,8 +1,6 @@
 package activity_0.student_package;
 
 public class StudentInfo {
-    //kung kailangan int ang age, contactNumber gumamit nalang ng parseInt();
-    // e.g. int a = Integer.parseInt(age);
     String name, gender, address, motherName, fatherName;
     int contactNumber, age;
 
