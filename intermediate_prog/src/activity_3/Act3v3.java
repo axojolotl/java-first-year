@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Act3v3 {
     private static double totalPrice, change, payAmount;
-    private static int cat, sub;
+    private static int cat, sub, quantity;
     private static String[] subCat = new String[3];
     private static final String[] categories = {"Pizza", "Steak", "Drinks"},
                                   pizzas = {"Hawaiian", "Bacon", "Eyeballs"},
@@ -71,9 +71,9 @@ public class Act3v3 {
         System.out.println("=========RECEIPT========" +
                         "\nTotal price: " + totalPrice +
                         "\nPrice paid: " + payAmount +
-                        "\nPurchased product: " + subCat[sub] + " "
-                        + categories[cat] + "\nChange: " + change +
-                        "\nThank you!");
+                        "\nPurchased product: " + subCat[sub-1] +
+                        "-"+ categories[cat-1] + " x" + quantity +
+                        "\nChange: " + change + "\nThank you!");
     }
 
     public static void mainDecision(byte choice){
@@ -103,7 +103,6 @@ public class Act3v3 {
     }
 
     public static void subDecision(byte choice, String[] subCategories, int[] prices){
-        int quantity;
         quantity = enterQuantity();
         if (choice == 1){
             sub = 1;

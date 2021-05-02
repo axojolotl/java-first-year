@@ -1,113 +1,114 @@
 package activity_3;
+import activity_3.oop.Pizza;
+
 import java.util.Scanner;
 
 public class Act3v2 {
     public static void run(){
-        printMenu();
-        byte categoryChoice = numInput();
-        mainSwitch(categoryChoice);
+        myMenu();
+        int pickAFood = numInput();
+        mainSwitch(pickAFood);
     }
 
-    public static void printMenu(){
-        System.out.println("----------Menu----------");
-        System.out.println("1. Bread");
-        System.out.println("2. Doughnut");
-        System.out.println("3. Cake");
+    public static void myMenu(){
+        System.out.println("""
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                1. Pizza
+                2. Steak
+                3. Drinks
+                """);
     }
 
-    public static byte numInput(){
+    public static int numInput(){
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter number: ");
-        return sc.nextByte();
+        System.out.print("Enter choice: ");
+        return sc.nextInt();
     }
 
-    public static void mainSwitch(byte choice){
-        byte varChoice; int qty; double finalPrice;
+    public static void mainSwitch(int choice){
+        int varChoice; int qty; double finalPrice;
 
         switch(choice){
             case 1:
-                //bread
-                breadMenu();
+                pizzaMenu();
                 varChoice = numInput();
-                System.out.println("------------------------");
+                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                 switch (varChoice){
                     case 1:
-                        System.out.println("You chose Plain.");
+                        System.out.println("HAWAIIAN-Pizza");
                         qty = qtyInput();
-                        finalPrice = qty * 59;
-                        System.out.println("Total Price: " + finalPrice);
+                        finalPrice = qty * 259;
+                        System.out.println("Price: " + finalPrice);
                         priceInput(finalPrice);
                         break;
                     case 2:
-                        System.out.println("You chose Ube.");
+                        System.out.println("BACON-Pizza");
                         qty = qtyInput();
-                        finalPrice = qty * 69;
-                        System.out.println("Total Price: " + finalPrice);
+                        finalPrice = qty * 279;
+                        System.out.println("Price: " + finalPrice);
                         priceInput(finalPrice);
                         break;
                     case 3:
-                        System.out.println("You chose Garlic.");
+                        System.out.println("EYEBALLS-Pizza");
                         qty = qtyInput();
-                        finalPrice = qty * 79;
-                        System.out.println("Total Price: " + finalPrice);
+                        finalPrice = qty * 309;
+                        System.out.println("Price: " + finalPrice);
                         priceInput(finalPrice);
                         break;
                 }
                 break;
             case 2:
-                //doughnut
-                doughnutMenu();
+                steakMenu();
                 varChoice = numInput();
-                System.out.println("------------------------");
+                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                 switch (varChoice){
                     case 1:
-                        System.out.println("You chose Plain.");
+                        System.out.println("T-BONE-Steak");
                         qty = qtyInput();
-                        finalPrice = qty * 39;
-                        System.out.println("Total Price: " + finalPrice);
+                        finalPrice = qty * 159;
+                        System.out.println("Price: " + finalPrice);
                         priceInput(finalPrice);
                         break;
                     case 2:
-                        System.out.println("You chose Glazed.");
+                        System.out.println("Sirloin-Steak");
                         qty = qtyInput();
-                        finalPrice = qty * 49;
-                        System.out.println("Total Price: " + finalPrice);
+                        finalPrice = qty * 269;
+                        System.out.println("Price: " + finalPrice);
                         priceInput(finalPrice);
                         break;
                     case 3:
-                        System.out.println("You chose Chocolate.");
+                        System.out.println("ROTTEN FLESH-Steak");
                         qty = qtyInput();
-                        finalPrice = qty * 49;
-                        System.out.println("Total Price: " + finalPrice);
+                        finalPrice = qty * 209;
+                        System.out.println("Price: " + finalPrice);
                         priceInput(finalPrice);
                         break;
                 }
                 break;
             case 3:
-                //cake
-                cakeMenu();
+                drinksMenu();
                 varChoice = numInput();
-                System.out.println("------------------------");
+                System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                 switch (varChoice){
                     case 1:
-                        System.out.println("You chose Mocha.");
+                        System.out.println("COKE-Drinks");
                         qty = qtyInput();
-                        finalPrice = qty * 239;
-                        System.out.println("Total Price: " + finalPrice);
+                        finalPrice = qty * 45;
+                        System.out.println("Price: " + finalPrice);
                         priceInput(finalPrice);
                         break;
                     case 2:
-                        System.out.println("You chose Black Forest.");
+                        System.out.println("COKE ZERO-Drinks");
                         qty = qtyInput();
-                        finalPrice = qty * 249;
-                        System.out.println("Total Price: " + finalPrice);
+                        finalPrice = qty * 55;
+                        System.out.println("Price: " + finalPrice);
                         priceInput(finalPrice);
                         break;
                     case 3:
-                        System.out.println("You chose Cookies and Cream.");
+                        System.out.println("WATER W/ ALGAE-Drinks");
                         qty = qtyInput();
-                        finalPrice = qty * 259;
-                        System.out.println("Total Price: " + finalPrice);
+                        finalPrice = qty * 69;
+                        System.out.println("Price: " + finalPrice);
                         priceInput(finalPrice);
                         break;
                 }
@@ -115,19 +116,28 @@ public class Act3v2 {
         }
     }
 
-    public static void breadMenu(){
-        System.out.println("------------------------");
-        System.out.println("1. PHP.59 Plain\n2. PHP.69 Ube\n3. PHP.79 Garlic");
+    public static void pizzaMenu(){
+        System.out.println("""
+                ------------------------
+                1. PHP.259 : Hawaiian
+                2. PHP.279 : Bacon
+                3. PHP.309 : Eyeballs""");
     }
 
-    public static void doughnutMenu(){
-        System.out.println("------------------------");
-        System.out.println("1. PHP.39 : Plain\n2. PHP.49 : Glazed\n3. PHP.49 : Chocolate");
+    public static void steakMenu(){
+        System.out.println("""
+                ------------------------
+                1. PHP.159 : T-Bone
+                2. PHP.169 : Sirloin
+                3. PHP.209 : Rotten Flesh""");
     }
 
-    public static void cakeMenu(){
-        System.out.println("------------------------");
-        System.out.println("1. PHP.239 : Mocha\n2. PHP.249 : Black Forest\n3. PHP.259 : Cookies and Cream");
+    public static void drinksMenu(){
+        System.out.println("""
+                ------------------------
+                1. PHP.45 : Coke
+                2. PHP.55 : Coke Zero
+                3. PHP.69 : Water w/ Algae""");
     }
 
     public static int qtyInput(){
@@ -138,16 +148,18 @@ public class Act3v2 {
 
     public static void priceInput(double price){
         Scanner sc = new Scanner(System.in);
-        System.out.println("------------------------");
-        System.out.println("Enter amount to pay: ");
+        System.out.print("""
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                Enter amount to pay:\040\040
+                """);
         double amount = sc.nextDouble();
 
         if (amount >= price){
-            System.out.println("------------------------");
-            System.out.println("Your change: " + (amount-price));
-            System.out.println("Come again.");
+            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            System.out.println("Total change: " + (amount-price));
+            System.out.println("Thank you for dining!");
         } else {
-            System.out.println("Insufficient amount.");
+            System.out.println("Not enough!!");
             priceInput(price);
         }
     }
