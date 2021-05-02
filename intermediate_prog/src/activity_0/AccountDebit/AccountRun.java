@@ -1,7 +1,7 @@
 package activity_0.AccountDebit;
 
 public class AccountRun {
-    public static void main(String[] args) {
+    public static void run() {
         Account[] accounts = new Account[2]; // READ ONLY
         float[] balances = {150f, 500.53f}; // ONLY TO ACHIEVE EXPECTED OUTPUT
         int ctr = 0;
