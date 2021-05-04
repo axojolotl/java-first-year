@@ -1,5 +1,4 @@
 package activity_3;
-
 import java.util.Scanner;
 
 public class Act3v3 {
@@ -123,3 +122,4 @@ public class Act3v3 {
         billing();
     }
 }
+

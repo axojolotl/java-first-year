@@ -2,6 +2,7 @@ package midterm_exam.bscs;
 import java.util.Scanner;
 public class Car {
     public String owner, yearModel;
+    public double amountLeft;
     public void owner(){
         Scanner sc = new Scanner(System.in);
         System.out.print("Owner: ");
@@ -10,11 +11,13 @@ public class Car {
         this.yearModel = sc.nextLine();
     }
 
-    public void upgradeAccessories(double availableAmount){
-        double amountLeft = availableAmount, ac = 21_500, leatherSeats = 14_400,
+    public double upgradeAccessories(double availableAmount){
+        this.amountLeft = availableAmount;
+        double ac = 21_500, leatherSeats = 14_400,
                 backWipers = 6_250, fogLights = 3_300;
         boolean acInstalled = false, lsInstalled = false,
                 bwInstalled = false, flInstalled = false;
+
         if(amountLeft >= ac){
             acInstalled = true;
             amountLeft -= ac;
@@ -37,6 +40,6 @@ public class Car {
         }
         System.out.println("Installed Fog Lights: " + flInstalled);
 
-        System.out.println("Amount Remaining After Upgrade: " + amountLeft);
+        return amountLeft;
     }
 }

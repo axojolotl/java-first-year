@@ -81,7 +81,6 @@ public class Act3v1 {
         double itemPrice;
         switch (choice) {
             case 1 -> {
-                //pizza
                 printSubMenu(food[0][1]);
                 variantChoice = userInput();
                 variantSwitch(variantChoice);
@@ -91,7 +90,6 @@ public class Act3v1 {
                 payBill(itemPrice);
             }
             case 2 -> {
-                //burger
                 printSubMenu(food[1][1]);
                 variantChoice = userInput();
                 variantSwitch(variantChoice);
@@ -101,7 +99,6 @@ public class Act3v1 {
                 payBill(itemPrice);
             }
             case 3 -> {
-                //sandwich
                 printSubMenu(food[2][1]);
                 variantChoice = userInput();
                 variantSwitch(variantChoice);
