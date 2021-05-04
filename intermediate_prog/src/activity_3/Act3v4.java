@@ -3,9 +3,9 @@ import java.util.Scanner;
 
 public class Act3v4 {
     public static final String[][][] food = {
-            { {"Pizza"},{"PHP239 Cheese", "PHP259 Pepperoni", "PHP259 Supreme"} },
-            { {"Burger"},{"PHP119 Classic", "PHP139 Cheese", "PHP149 TLC"} },
-            { {"Sandwich"},{"PHP79 Cheese", "PHP89 Cheese w/ Egg ", "PHP89 Ham and Cheese"} } };
+            { {"Pizza"},{"Cheese", "Pepperoni", "Supreme"} },
+            { {"Burger"},{"Classic", "Cheese", "TLC"} },
+            { {"Sandwich"},{"Cheese", "Cheese w/ Egg ", "Ham and Cheese"} } };
     public static final int[][] prices = {{239, 259, 259}, {119, 139, 149}, {79, 89, 89}};
     public static int categoryChoice, variantChoice, quantity, price = 0;
 
@@ -14,9 +14,9 @@ public class Act3v4 {
         System.out.print("Enter number[1-3]: ");
         categoryChoice = userInput();
         printSubMenu();
-        System.out.println("Enter number[1-3]: ");
+        System.out.print("Enter number[1-3]: ");
         variantChoice = userInput();
-        System.out.println("Enter quantity: ");
+        System.out.print("Enter quantity: ");
         quantity = userInput();
         payBill(prices[categoryChoice-1][variantChoice-1] * quantity);
     }
@@ -32,8 +32,8 @@ public class Act3v4 {
         System.out.println("===============================");
         int ctr = 1;
         for (int i = 0; i < food[categoryChoice-1][1].length ; i++) {
-            System.out.println(ctr + ". " + food[categoryChoice-1][1][i]);
-            ctr++;
+            System.out.println(ctr + ". PHP" + prices[categoryChoice-1][ctr-1] +
+                                " " + food[categoryChoice-1][1][i]); ctr++;
         }
     }
 
@@ -48,7 +48,12 @@ public class Act3v4 {
         double amount = sc.nextInt();
         if (amount >= price){
             System.out.println("============RECEIPT============" +
-                               "\nChange: " + (amount-price) +
+                               "\nPurchased: x" + quantity + " " +
+                                food[categoryChoice-1][1][variantChoice-1] +
+                                food[categoryChoice-1][0][0] +
+                               "\nTotal price: PHP" + price +
+                               "\nAmount paid: PHP" + amount +
+                               "\nChange: PHP" + (amount-price) +
                                "\nEnjoy your meal.");
         } else {
             System.out.println("Insufficient amount.");
