@@ -7,7 +7,7 @@ public class Act3v4 {
             { {"Burger"},{"Classic", "Cheese", "TLC"} },
             { {"Sandwich"},{"Cheese", "Cheese w/ Egg ", "Ham and Cheese"} } };
     public static final int[][] prices = {{239, 259, 259}, {119, 139, 149}, {79, 89, 89}};
-    public static int categoryChoice, variantChoice, quantity, price = 0;
+    public static int categoryChoice, variantChoice, quantity;
 
     public static void main(String[] args) {
         printMenu();
