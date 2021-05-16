@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Act4v2 {
     static byte n; static String s;
+
     public static void print(String s){
         System.out.println(s);
     }
@@ -77,6 +78,18 @@ public class Act4v2 {
     }
 
     public static void main(String[] args) {
+        print("PRINTER METHOD");
+        print("Hello world");
+
+        print("BYTE INPUT METHOD");
+        bnp();
+
+        print("STRING INPUT METHOD");
+        snp();
+
+        print("ARRAY INPUT METHOD");
+        anp((byte) 5);
+
         n = bnp();
         byte[] arr2 = anp(n);
         print(countNumberOfDuplicates(arr2));
