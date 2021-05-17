@@ -77,7 +77,7 @@ public class Act4v2 {
         return s;
     }
 
-    public static void main(String[] args) {
+    public static void run() {
         print("PRINTER METHOD");
         print("Hello world");
 
