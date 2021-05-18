@@ -45,15 +45,14 @@ public class MergeSort {
             mergeSort(arr, mid+1, high);
 
             merge(arr,low,mid,high);
-
         }
     }
 
-    public static void main(String[] args) {
-        int[] nums = {6,4,2,1,45,2,3,6,7,8,9,5,345,53,42,42,12,453,89,0};
+    public static void run() {
+        int[] arrN = {6,4,2,1,45,2,3,6,7,8,9,5,345,53,42,42,12,453,89,0};
 
-        System.out.println(Arrays.toString(nums));
-        mergeSort(nums, 0, nums.length-1);
-        System.out.println(Arrays.toString(nums));
+        System.out.println(Arrays.toString(arrN));
+        mergeSort(arrN, 0, arrN.length-1);
+        System.out.println(Arrays.toString(arrN));
     }
 }
