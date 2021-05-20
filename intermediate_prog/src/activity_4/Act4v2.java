@@ -1,30 +1,31 @@
 package activity_4;
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Act4v2 {
-    static byte n; static String s;
 
     public static void print(String s){
         System.out.println(s);
     }
 
-    public static byte bnp(){
+    public static byte byteIn(){
         print("Enter byte: ");
         Scanner sc = new Scanner(System.in);
         return sc.nextByte();
     }
 
-    public static String snp(){
+    public static String strIn(){
         print("Enter string: ");
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
 
-    public static byte[] anp(byte size){
+    public static byte[] arrIn(byte size){
         print("Enter array[]: ");
         byte[] arr =  new byte[size];
         for (int i = 0; i < size ; i++)
-            arr[i] = bnp();
+            arr[i] = byteIn();
         return arr;
     }
 
@@ -33,7 +34,8 @@ public class Act4v2 {
         for (byte i = 0; i < arr.length; i++)
             for (int j = i+1; j < arr.length ; j++)
                 if (arr[i] == arr[j]) ctr++;
-         return "The number of duplicates: " + ctr;
+        System.out.println(Arrays.toString(arr));
+        return "The number of duplicates: " + ctr;
     }
 
     public static String reverseString(String n){
@@ -52,12 +54,13 @@ public class Act4v2 {
 
     public static String generateMatrix(byte size){
         String matrix = "";
+        int ctr = size*size;
         for (int i = 0; i < size ; i++) {
-            for (int j = 1; j <= size ; j++)
-                matrix += j + " ";
-            matrix += "\n";
-        }
-        return matrix;
+            for (int j = 1; j <= size ; j++){
+                matrix += ctr + "\t";
+                ctr--;
+            } matrix += "\n";
+        } return matrix;
     }
 
     public static String countdownRecursion(byte n){
@@ -77,36 +80,67 @@ public class Act4v2 {
         return s;
     }
 
-    public static void run() {
-        print("PRINTER METHOD");
-        print("Hello world");
+    public static int factorial(byte n){
+        int total = 1;
+        for (int i = n; i > 1; i--) total *= i;
+        return total;
+    }
+    
+    public static void pyramid(int n){
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < n-i; j++) System.out.print(" ");
+        for(int k = 0; k <= i+i;k++) System.out.print("*");
+        System.out.println();
+      }
+    }
 
-        print("BYTE INPUT METHOD");
-        bnp();
+    public static String randomBandNameGenerator(){
+        String[] desc = {"Cool", "Ghastly", "Tenacious", "Loaded", "Burning", "Explosive"},
+                 obj = {"Machine", "Dipper", "Toilet", "Astronauts", "Chickens", "Refrigerator"};
 
-        print("STRING INPUT METHOD");
-        snp();
+        int rnd1 = new Random().nextInt(desc.length);
+        int rnd2 = new Random().nextInt(obj.length);
 
-        print("ARRAY INPUT METHOD");
-        anp((byte) 5);
+        return desc[rnd1]+obj[rnd2];
+    }
 
-        n = bnp();
-        byte[] arr2 = anp(n);
+    public static String coinFlip(){
+        int rnd = new Random().nextInt(2);
+        if (rnd == 1) return "Heads!";
+        return "Tails!";
+    }
+
+    public static void main(String... args) {
+
+        print("\nCOUNT NUMBER OF DUPLICATES");
+        byte[] arr2 = arrIn(byteIn());
         print(countNumberOfDuplicates(arr2));
 
-        s = snp();
-        print(reverseString(s));
+        print("\nREVERSE A STRING");
+        print(reverseString(strIn()));
 
-        s = snp();
-        print(Boolean.toString(palindromeChecker(s)));
+        print("\nPALINDROME CHECKER");
+        print(Boolean.toString(palindromeChecker(strIn())));
 
-        n = bnp();
-        print(generateMatrix(n));
+        print("\nGENERATE DESCENDING MATRIX");
+        print(generateMatrix(byteIn()));
 
-        n = bnp();
-        print(countdownRecursion(n));
+        print("\nCOUNTDOWN");
+        print(countdownRecursion(byteIn()));
 
-        n = bnp();
-        print(fizzBuzz(n));
+        print("\nFIZZ-BUZZ");
+        print(fizzBuzz(byteIn()));
+
+        print("\nFACTORIAL");
+        print(Integer.toString(factorial(byteIn())));
+
+        print("\nPYRAMID");
+        pyramid(byteIn());
+
+        print("\nBAND NAME GENERATOR");
+        print(randomBandNameGenerator());
+
+        print("\nCOIN FLIP");
+        print(coinFlip());
     }
 }
