@@ -110,8 +110,7 @@ public class Act4v2 {
         return "Tails!";
     }
 
-    public static void main(String... args) {
-
+    public static void run() {
         print("\nCOUNT NUMBER OF DUPLICATES");
         byte[] arr2 = arrIn(byteIn());
         print(countNumberOfDuplicates(arr2));
