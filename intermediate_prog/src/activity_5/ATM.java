@@ -10,6 +10,7 @@ public class ATM {
                 {{002},{542817},{16_790}},
                 {{003},{987021},{100_210}}};
         private static double bal;
+        private static boolean x = true;
 
         private static void pressAnyKeyToContinue() {
                 println("Press Enter key to continue...");
@@ -31,26 +32,25 @@ public class ATM {
         }
 
         private static void menu(){
-                print("""
+                while (x){
+                        print("""
                         ==========WELCOME==========
                         1. Check Balance
                         2. Deposit
                         3. Withdraw
                         4. Exit
                         Choice:\s""");
-                double n = inputNum();
-                switch((int) n){
-                        case 1: checkBalance();
-                                pressAnyKeyToContinue();
-                                menu(); break;
-                        case 2: deposit();
-                                pressAnyKeyToContinue();
-                                menu(); break;
-                        case 3: withdraw();
-                                pressAnyKeyToContinue();
-                                menu(); break;
-                        case 4: println("See you again."); break;
-                        default: println("Invalid option. "); menu();
+                        double n = inputNum();
+                        switch((int) n){
+                                case 1: checkBalance();
+                                        pressAnyKeyToContinue(); break;
+                                case 2: deposit();
+                                        pressAnyKeyToContinue(); break;
+                                case 3: withdraw();
+                                        pressAnyKeyToContinue(); break;
+                                case 4: println("See you again."); x = false ; break;
+                                default: println("Invalid option. "); menu();
+                        }
                 }
         }
 
