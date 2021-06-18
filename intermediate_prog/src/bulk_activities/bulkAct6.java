@@ -17,14 +17,14 @@ public class bulkAct6 {
             {"III", "6", "Eng", "2"},
             {"JJJ", "8", "Law", "4"} };
 
-    static String[][] filter = new String[record.length][record[0].length];
+    //static String[][] filter = new String[record.length][record[0].length];
 
     public static void main(String[] args) {
         printRecord();
         System.out.print("Search Course: ");
         String course = sc.next();
         sort();
-        if (course.toLowerCase().equals("all")) printRecord();
+        if (course.equalsIgnoreCase("all")) printRecord();
         else printFiltered(course);
     }
 
@@ -64,20 +64,20 @@ public class bulkAct6 {
 
 
     public static void bubbleSort(String type, String order){
-        if (type.toLowerCase().equals("age")){ t = 1; }
-        else if (type.toLowerCase().equals("year")){ t = 3; }
+        if (type.equalsIgnoreCase("age")){ t = 1; }
+        else if (type.equalsIgnoreCase("year")){ t = 3; }
 
         String[] temp;
         for(int i = record.length; i > 0; i--){
             for (int j = 0; j < i-1; j++) {
-                if (order.toLowerCase().equals("ascending")) {
+                if (order.equalsIgnoreCase("ascending")) {
                     if (Integer.parseInt(record[j][t]) > Integer.parseInt(record[j + 1][t])) {
                         temp = record[j];
                         record[j] = record[j + 1];
                         record[j + 1] = temp;
                     }
                 }
-                if (order.toLowerCase().equals("descending")) {
+                if (order.equalsIgnoreCase("descending")) {
                     if (Integer.parseInt(record[j][t]) < Integer.parseInt(record[j + 1][t])) {
                         temp = record[j];
                         record[j] = record[j + 1];
@@ -87,4 +87,5 @@ public class bulkAct6 {
             }
         }
     }
+
 }

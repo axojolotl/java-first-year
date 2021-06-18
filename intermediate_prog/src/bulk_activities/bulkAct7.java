@@ -31,7 +31,6 @@ public class bulkAct7 {
                 records[i][j] = scStr.nextLine();
             }
         }
-
         printDb(records);
     }
 
