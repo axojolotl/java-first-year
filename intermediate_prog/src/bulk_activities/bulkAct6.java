@@ -59,44 +59,32 @@ public class bulkAct6 {
         String order = sc.next();
 
         System.out.println("-----SORTED BY " + type + ", " + order+ "-----");
-        if (order.toLowerCase().equals("ascending")){
-            bubbleSortAscending(type);
-        } else if (order.toLowerCase().equals("descending")){
-            bubbleSortDescending(type);
-        }
+        bubbleSort(type, order);
     }
 
 
-    public static void bubbleSortAscending(String type){
+    public static void bubbleSort(String type, String order){
         if (type.toLowerCase().equals("age")){ t = 1; }
         else if (type.toLowerCase().equals("year")){ t = 3; }
 
         String[] temp;
         for(int i = record.length; i > 0; i--){
             for (int j = 0; j < i-1; j++) {
-                if(Integer.parseInt(record[j][t]) > Integer.parseInt(record[j+1][t])){
-                    temp = record[j];
-                    record[j] = record[j+1];
-                    record[j+1] = temp;
+                if (order.toLowerCase().equals("ascending")) {
+                    if (Integer.parseInt(record[j][t]) > Integer.parseInt(record[j + 1][t])) {
+                        temp = record[j];
+                        record[j] = record[j + 1];
+                        record[j + 1] = temp;
+                    }
+                }
+                if (order.toLowerCase().equals("descending")) {
+                    if (Integer.parseInt(record[j][t]) < Integer.parseInt(record[j + 1][t])) {
+                        temp = record[j];
+                        record[j] = record[j + 1];
+                        record[j + 1] = temp;
+                    }
                 }
             }
         }
     }
-
-    public static void bubbleSortDescending(String type){
-        if (type.toLowerCase().equals("age")){ t = 1; }
-        else if (type.toLowerCase().equals("year")){ t = 3; }
-
-        String[] temp;
-        for(int i = record.length; i > 0; i--){
-            for (int j = 0; j < i-1; j++) {
-                if(Integer.parseInt(record[j][t]) < Integer.parseInt(record[j+1][t])){
-                    temp = record[j];
-                    record[j] = record[j+1];
-                    record[j+1] = temp;
-                }
-            }
-        }
-    }
-
 }
