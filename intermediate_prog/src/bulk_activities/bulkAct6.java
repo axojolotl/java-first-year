@@ -24,16 +24,30 @@ public class bulkAct6 {
         System.out.print("Search Course: ");
         String course = sc.next();
         sort();
-        printFiltered(course);
+        if (course.toLowerCase().equals("all")) printRecord();
+        else printFiltered(course);
     }
 
     public static void printRecord(){
         System.out.println("NAME\tAGE\t\tCOURSE\tYEAR LEVEL");
-        for (int i = 0; i < record.length ; i++) {
-            for (int j = 0; j < record[i].length ; j++) {
-                System.out.print(record[i][j] + "\t\t");
+        for (String[] strings : record) {
+            for (String string : strings) {
+                System.out.print(string + "\t\t");
             }
             System.out.println();
+        }
+        System.out.println("-----END RECORD-----");
+    }
+
+    public static void printFiltered(String course){
+        System.out.println("NAME\tAGE\t\tCOURSE\tYEAR LEVEL");
+        for (String[] strings : record) {
+            if (strings[2].toLowerCase().equals(course)) {
+                for (String string : strings) {
+                    System.out.print(string + "\t\t");
+                }
+                System.out.println();
+            }
         }
         System.out.println("-----END RECORD-----");
     }
@@ -52,18 +66,6 @@ public class bulkAct6 {
         }
     }
 
-    public static void printFiltered(String course){
-        System.out.println("NAME\tAGE\t\tCOURSE\tYEAR LEVEL");
-        for (int i = 0; i < record.length ; i++) {
-            if (record[i][2].toLowerCase().equals(course)){
-                for (int j = 0; j < record[i].length ; j++) {
-                    System.out.print(record[i][j] + "\t\t");
-                }
-                System.out.println();
-            }
-        }
-        System.out.println("-----END RECORD-----");
-    }
 
     public static void bubbleSortAscending(String type){
         if (type.toLowerCase().equals("age")){ t = 1; }
