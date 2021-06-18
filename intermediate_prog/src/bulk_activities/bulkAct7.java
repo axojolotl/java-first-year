@@ -36,9 +36,9 @@ public class bulkAct7 {
 
     public static void printDb(String[][] records){
         System.out.println("Name\tAge\t\tGender");
-        for (int i = 0; i < records.length ; i++) {
-            for (int j = 0; j < records[i].length; j++) {
-                System.out.print(records[i][j] + "\t\t");
+        for (String[] record : records) {
+            for (String s : record) {
+                System.out.print(s + "\t\t");
             }
             System.out.println();
         }
