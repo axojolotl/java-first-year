@@ -19,7 +19,10 @@ public class bulkAct5 {
 
     public static void main(String[] args) {
         startDb();
-        searchResults(inputParameters());
+        //bruh this infinite loop
+        while (true){
+            searchResults(inputParameters());
+        }
     }
 
     public static void startDb(){
