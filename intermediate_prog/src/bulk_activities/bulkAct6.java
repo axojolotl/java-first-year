@@ -17,15 +17,15 @@ public class bulkAct6 {
             {"III", "6", "Eng", "2"},
             {"JJJ", "8", "Law", "4"} };
 
-    //static String[][] filter = new String[record.length][record[0].length];
-
     public static void main(String[] args) {
-        printRecord();
-        System.out.print("Search Course: ");
-        String course = sc.next();
-        sort();
-        if (course.equalsIgnoreCase("all")) printRecord();
-        else printFiltered(course);
+        while (true){
+            printRecord();
+            System.out.print("Search: ");
+            String search = sc.next();
+            sort();
+            if (search.equalsIgnoreCase("all")) printRecord();
+            else printFiltered(search);
+        }
     }
 
     public static void printRecord(){
@@ -39,10 +39,10 @@ public class bulkAct6 {
         System.out.println("-----END RECORD-----");
     }
 
-    public static void printFiltered(String course){
+    public static void printFiltered(String search){
         System.out.println("NAME\tAGE\t\tCOURSE\tYEAR LEVEL");
         for (String[] strings : record) {
-            if (strings[2].toLowerCase().equals(course)) {
+            if (strings[2].toLowerCase().equals(search) || strings[3].equals(search)) {
                 for (String string : strings) {
                     System.out.print(string + "\t\t");
                 }
@@ -87,5 +87,4 @@ public class bulkAct6 {
             }
         }
     }
-
 }

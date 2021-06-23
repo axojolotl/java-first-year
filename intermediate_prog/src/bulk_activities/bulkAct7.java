@@ -31,11 +31,14 @@ public class bulkAct7 {
                 records[i][j] = scStr.nextLine();
             }
         }
-        printDb(records);
+        printDb(records,informations);
     }
 
-    public static void printDb(String[][] records){
-        System.out.println("Name\tAge\t\tGender");
+    public static void printDb(String[][] records,String[] informations){
+        for (String information : informations) {
+            System.out.print(information+"\t\t");
+        }
+        System.out.println();
         for (String[] record : records) {
             for (String s : record) {
                 System.out.print(s + "\t\t");
@@ -43,5 +46,4 @@ public class bulkAct7 {
             System.out.println();
         }
     }
-
 }
