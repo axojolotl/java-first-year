@@ -42,7 +42,7 @@ public class bulkAct6 {
     public static void printFiltered(String search){
         System.out.println("NAME\tAGE\t\tCOURSE\tYEAR LEVEL");
         for (String[] strings : record) {
-            if (strings[2].toLowerCase().equals(search) || strings[3].equals(search)) {
+            if (strings[2].toLowerCase().equals(search) || strings[t].equals(search)) {
                 for (String string : strings) {
                     System.out.print(string + "\t\t");
                 }
