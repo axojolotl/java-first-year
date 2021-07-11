@@ -5,8 +5,14 @@ class Author {
 
     public Author(String name, String email, String gender) {
         this.name = name;
-        this.email = email;
-        this.gender = gender;
+        if (email.contains("@"))
+            this.email = email;
+        else
+            System.out.println("Invalid email! Set to empty string");
+        if (gender.equalsIgnoreCase("male") || gender.equalsIgnoreCase("female"))
+            this.gender = gender;
+        else
+            System.out.println("Invalid gender! Set to Unknown.");
     }
 
     public String getName() {
@@ -52,8 +58,12 @@ class Book {
         this.author = author;
         if (price > 0)
             this.price = price;
+        else
+            System.out.println("Note: Price should be positive! Set to 0");
         if (stock >= 0)
             this.stock = stock;
+        else
+            System.out.println("Book stocks cannot be negative! Set to 0");
     }
 
     public Author getAuthor() {
@@ -93,13 +103,13 @@ class Book {
 
 public class BookMain {
     public static void main(String[] args) {
-        Author author1 = new Author("Marcus Laurence", "mlaurce@neu.edu.ph", "Male");
+        Author author1 = new Author("Marcus Laurence", "mlaurce.neu.edu.ph", "male");
         author1.print();
 
-        Book bk1 = new Book("Do androids dream of electric sheep?", author1, 699.69, 5);
+        Book bk1 = new Book("Do androids dream of electric sheep?", author1, -699.69, -5);
         bk1.print();
 
-        author1.setEmail("laurenceM@neu.edu.ph");
+        author1.setEmail("hokdog@hotmail.com");
         author1.print();
         bk1.print();
 
