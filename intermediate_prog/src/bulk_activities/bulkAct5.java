@@ -1,6 +1,5 @@
 package bulk_activities;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class bulkAct5 {
