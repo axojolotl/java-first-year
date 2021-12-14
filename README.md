@@ -1,1 +1,2 @@
-## just a repository for school stuff during 1st year in uni.
+## first_year_java
+Some are missing, can't get em all.
